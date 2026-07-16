@@ -1,12 +1,22 @@
-# Kunal Bhasin — Portfolio
+# Personal Portfolio
 
-Dark editorial portfolio built with React + Vite. No UI libraries, no templates — hand-written CSS.
+**Live: [kunal-bhasin-portfolio.vercel.app](https://kunal-bhasin-portfolio.vercel.app)**
 
-## Edit your content
+My portfolio site — designed and built from scratch with React + Vite. No template, no UI library, hand-written CSS.
 
-Everything (name, bio, projects, links, skills) lives in **`src/data.js`**. Edit that one file; the site updates automatically.
+![Preview](public/og.png)
 
-**Screenshots:** drop images into `public/projects/` and list them in a project's `images` array in `src/data.js`, e.g. `images: ['projects/drift-1.png']`. They appear as a scrollable strip when the project row is expanded.
+## Design
+
+Dark editorial style: oversized condensed type (Archivo variable font — project titles animate along the width axis on hover), serif-italic accents (Instrument Serif), monospace labels (JetBrains Mono), chartreuse accent on warm black, film-grain overlay.
+
+Interactions: staged hero reveal, scroll progress bar, hero parallax, rolling nav links, expandable project rows with screenshot strips and a fullscreen lightbox, embedded product demo video, live clock. Respects `prefers-reduced-motion`.
+
+## Stack
+
+- React 18 + Vite — single-page, no router needed
+- Hand-written CSS (one file, custom properties for theming)
+- All content lives in [`src/data.js`](src/data.js) — one file to update projects, bio, and links
 
 ## Run locally
 
@@ -15,18 +25,10 @@ npm install
 npm run dev
 ```
 
-## Deploy free (pick one)
+## Deploy
 
-**Vercel (easiest):**
-1. Push this folder to a GitHub repo
-2. Go to vercel.com → New Project → import the repo → Deploy
-3. Done — you get a URL like `kunal-portfolio.vercel.app` to put on LinkedIn
+`npm run build` → deploy `dist/` anywhere. Currently on Vercel; `vite.config.js` uses `base: './'` so it also works on GitHub Pages or `file://`.
 
-**Netlify:** same flow at netlify.com, or drag-and-drop the `dist/` folder after `npm run build`.
+---
 
-**GitHub Pages:**
-```bash
-npm run build
-# push the dist/ folder to a gh-pages branch, or use the gh-pages package
-```
-(`vite.config.js` already uses `base: './'` so it works on Pages without changes.)
+Built by [Kunal Bhasin](https://github.com/kunalbhasin135) · [LinkedIn](https://www.linkedin.com/in/kunal-bhasin-4122a62b9/)
